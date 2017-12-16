@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Balham.otf">
+            <string>Balham</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Quizz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKL-Pn-fuV">
+                                <rect key="frame" x="111" y="587" width="152" height="59"/>
+                                <color key="backgroundColor" red="0.40534460544586182" green="0.55269497632980347" blue="0.7647513747215271" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="5Y5-Cd-IJg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="27"/>
+                                <state key="normal" title="New game">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapNewGameButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="WIM-oU-Uii"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7WK-xK-reH">
+                                <rect key="frame" x="169" y="582" width="50" height="50"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 / 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vet-u0-DHx">
+                                <rect key="frame" x="65" y="378" width="245" height="29.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fuk-zR-ipu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Dw9-Kp-d3q">
+                                <rect key="frame" x="169" y="598" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oTA-Pa-mvS" customClass="QuestionView" customModule="Quizz" customModuleProvider="target">
+                                <rect key="frame" x="67" y="86" width="245" height="245"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnE-0I-SAB">
+                                        <rect key="frame" x="8" y="8" width="229" height="229"/>
+                                        <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="23"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="Icon Correct" translatesAutoresizingMaskIntoConstraints="NO" id="t5g-V1-5Mm">
+                                        <rect key="frame" x="104" y="202" width="36" height="35"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.75352650880813599" green="0.76836377382278442" blue="0.7843126654624939" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="t5g-V1-5Mm" secondAttribute="trailing" constant="105" id="258-IF-XA7"/>
+                                    <constraint firstAttribute="bottom" secondItem="t5g-V1-5Mm" secondAttribute="bottom" constant="8" id="7cA-ab-YDk"/>
+                                    <constraint firstAttribute="trailing" secondItem="hnE-0I-SAB" secondAttribute="trailing" constant="8" id="Fwt-wr-s44"/>
+                                    <constraint firstItem="t5g-V1-5Mm" firstAttribute="leading" secondItem="oTA-Pa-mvS" secondAttribute="leading" constant="104" id="Zc8-dV-BZJ"/>
+                                    <constraint firstItem="hnE-0I-SAB" firstAttribute="top" secondItem="oTA-Pa-mvS" secondAttribute="top" constant="8" id="bTX-6o-dkL"/>
+                                    <constraint firstItem="hnE-0I-SAB" firstAttribute="leading" secondItem="oTA-Pa-mvS" secondAttribute="leading" constant="8" id="l5L-0t-fnm"/>
+                                    <constraint firstAttribute="bottom" secondItem="hnE-0I-SAB" secondAttribute="bottom" constant="8" id="sla-zM-osR"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="icon" destination="t5g-V1-5Mm" id="ztw-fv-GAX"/>
+                                    <outlet property="label" destination="hnE-0I-SAB" id="I1K-PT-Dza"/>
+                                    <outletCollection property="gestureRecognizers" destination="olZ-kl-yGz" appends="YES" id="KuY-dY-gbV"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This's question it's true ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v5R-OO-ffd">
+                                <rect key="frame" x="67" y="497" width="245" height="22"/>
+                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.35604232549667358" green="0.41812038421630859" blue="0.50197958946228027" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="vet-u0-DHx" firstAttribute="top" secondItem="oTA-Pa-mvS" secondAttribute="bottom" constant="47" id="3Nb-yz-hWO"/>
+                            <constraint firstItem="7WK-xK-reH" firstAttribute="top" secondItem="v5R-OO-ffd" secondAttribute="bottom" constant="45" id="4g2-s9-g5f"/>
+                            <constraint firstItem="Dw9-Kp-d3q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="169" id="5Br-Gp-6u9"/>
+                            <constraint firstItem="v5R-OO-ffd" firstAttribute="top" secondItem="vet-u0-DHx" secondAttribute="bottom" constant="89.5" id="7Es-lL-jbV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mKL-Pn-fuV" secondAttribute="trailing" constant="112" id="9Us-Ux-nkz"/>
+                            <constraint firstItem="vet-u0-DHx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="Azz-cO-T88"/>
+                            <constraint firstItem="vet-u0-DHx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="358" id="DFY-au-X2A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Dw9-Kp-d3q" secondAttribute="bottom" constant="32" id="K6P-T6-R0a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v5R-OO-ffd" secondAttribute="trailing" constant="63" id="Lnu-uK-S49"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vet-u0-DHx" secondAttribute="trailing" constant="65" id="QF1-LU-pKu"/>
+                            <constraint firstItem="mKL-Pn-fuV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="TNi-zS-53E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mKL-Pn-fuV" secondAttribute="trailing" constant="112" id="TOX-g4-pAm"/>
+                            <constraint firstItem="v5R-OO-ffd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="h6b-OA-RM1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mKL-Pn-fuV" secondAttribute="bottom" constant="21" id="hb4-vb-1yV"/>
+                            <constraint firstItem="mKL-Pn-fuV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="lj9-bj-Pay"/>
+                            <constraint firstItem="oTA-Pa-mvS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="66" id="nyn-vJ-z5m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oTA-Pa-mvS" secondAttribute="trailing" constant="63" id="qWR-f2-7pf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mKL-Pn-fuV" secondAttribute="bottom" constant="21" id="tyj-SK-zFa"/>
+                            <constraint firstItem="v5R-OO-ffd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vU2-GP-iEr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dw9-Kp-d3q" secondAttribute="trailing" constant="169" id="xgB-G5-kdG"/>
+                            <constraint firstItem="oTA-Pa-mvS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="z2M-ge-trE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Dw9-Kp-d3q" id="Z8H-gs-KXR"/>
+                        <outlet property="newGameButton" destination="mKL-Pn-fuV" id="V1T-mO-ZBl"/>
+                        <outlet property="questionView" destination="oTA-Pa-mvS" id="GId-h6-BW0"/>
+                        <outlet property="scoreLabel" destination="vet-u0-DHx" id="We1-AW-xSf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="olZ-kl-yGz">
+                    <connections>
+                        <action selector="dragQuestionView:" destination="BYZ-38-t0r" id="6dS-7H-P3N"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon Correct" width="36" height="35"/>
+    </resources>
+</document>
